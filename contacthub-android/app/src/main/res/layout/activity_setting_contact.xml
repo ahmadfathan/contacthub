@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?colorPrimary"
+        android:elevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/maisonneuebold"
+                android:text="@string/title_setting_contact"
+                android:textSize="@dimen/text_size_16sp"
+                android:textColor="@color/md_white_1000"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp"
+                android:layout_marginStart="@dimen/margin_16dp">
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:text="@string/allow_share_profile"
+                    android:textSize="@dimen/text_size_12sp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:fontFamily="@font/sfuidisplaymedium"
+                android:text="@string/txt_save_contact_friend_by"
+                android:textSize="@dimen/text_size_12sp"/>
+
+            <Spinner
+                android:id="@+id/spinSaveContactFriendBy"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp" />
+            <LinearLayout
+                android:id="@+id/layAgamaFriend"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20dp"
+                    android:layout_marginTop="@dimen/margin_16dp"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:text="@string/txt_religion"
+                    android:textSize="@dimen/text_size_12sp"/>
+
+                <Spinner
+                    android:id="@+id/spinAgamaFriend"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:layout_marginEnd="@dimen/margin_16dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layJenisKelaminFriend"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20dp"
+                    android:layout_marginTop="@dimen/margin_16dp"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:text="@string/txt_gender"
+                    android:textSize="@dimen/text_size_12sp"/>
+
+                <Spinner
+                    android:id="@+id/spinJenisKelaminFriend"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:layout_marginEnd="@dimen/margin_16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layKotaFriend"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20dp"
+                    android:layout_marginTop="@dimen/margin_16dp"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:text="@string/txt_provinsi"
+                    android:textSize="@dimen/text_size_12sp"/>
+
+                <Spinner
+                    android:id="@+id/spinProvinsiFriend"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:layout_marginEnd="@dimen/margin_16dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20dp"
+                    android:layout_marginTop="@dimen/margin_16dp"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:text="@string/txt_kota"
+                    android:textSize="@dimen/text_size_12sp"/>
+
+                <Spinner
+                    android:id="@+id/spinKotaFriend"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:layout_marginEnd="@dimen/margin_16dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layInterestFriend"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20dp"
+                    android:layout_marginTop="@dimen/margin_16dp"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:text="@string/txt_interest"
+                    android:textSize="@dimen/text_size_12sp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/gridInterestFriend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rectangle_white_slim"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp" />
+
+                    <ImageButton
+                        android:id="@+id/btnCariInterestFriend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/ic_browse" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:fontFamily="@font/sfuidisplaymedium"
+                android:text="@string/txt_save_mycontact_by"
+                android:textSize="@dimen/text_size_12sp"/>
+
+            <Spinner
+                android:id="@+id/spinSaveMyContactBy"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp" />
+            <LinearLayout
+                android:id="@+id/layAgama"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20dp"
+                    android:layout_marginTop="@dimen/margin_16dp"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:text="@string/txt_religion"
+                    android:textSize="@dimen/text_size_12sp"/>
+
+                <Spinner
+                    android:id="@+id/spinAgama"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:layout_marginEnd="@dimen/margin_16dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layJenisKelamin"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20dp"
+                    android:layout_marginTop="@dimen/margin_16dp"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:text="@string/txt_gender"
+                    android:textSize="@dimen/text_size_12sp"/>
+
+                <Spinner
+                    android:id="@+id/spinJenisKelamin"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:layout_marginEnd="@dimen/margin_16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layKota"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20dp"
+                    android:layout_marginTop="@dimen/margin_16dp"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:text="@string/txt_provinsi"
+                    android:textSize="@dimen/text_size_12sp"/>
+
+                <Spinner
+                    android:id="@+id/spinProvinsi"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:layout_marginEnd="@dimen/margin_16dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20dp"
+                    android:layout_marginTop="@dimen/margin_16dp"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:text="@string/txt_kota"
+                    android:textSize="@dimen/text_size_12sp"/>
+
+                <Spinner
+                    android:id="@+id/spinKota"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:layout_marginEnd="@dimen/margin_16dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layMyInterest"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20dp"
+                    android:layout_marginTop="@dimen/margin_16dp"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:text="@string/txt_interest"
+                    android:textSize="@dimen/text_size_12sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/gridMyInterest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rectangle_white_slim"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp" />
+
+                    <ImageButton
+                        android:id="@+id/btnCariMyInterest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/ic_browse" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                style="@style/TextLabel">
+                <EditText
+                    android:id="@+id/edtLimitSaveMyContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:textColorHint="@color/md_white_1000"
+                    android:textColor="@color/colorTextView"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:autofillHints="@string/txt_limit_save_mycontact"
+                    android:hint="@string/txt_limit_save_mycontact"
+                    android:textSize="@dimen/text_size_14sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                style="@style/TextLabel">
+                <EditText
+                    android:id="@+id/edtLimitSaveContactFriend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:textColorHint="@color/md_white_1000"
+                    android:textColor="@color/colorTextView"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:autofillHints="@string/txt_limit_save_contact_friend"
+                    android:hint="@string/txt_limit_save_contact_friend"
+                    android:textSize="@dimen/text_size_14sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnSimpan"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginTop="@dimen/margin_24dp"
+                android:layout_marginStart="@dimen/margin_24dp"
+                android:layout_marginEnd="@dimen/margin_24dp"
+                android:fontFamily="@font/sfuidisplaymedium"
+                android:background="@drawable/btn_primary_round"
+                android:text="@string/btn_save"
+                android:textColor="@color/md_white_1000"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

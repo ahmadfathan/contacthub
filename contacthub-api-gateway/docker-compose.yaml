@@ -1,0 +1,18 @@
+version: '3'
+networks:
+    default: 
+        external:
+            name: contacthub_net
+services:
+# Web Server
+    api_gateway_contacthub:
+        container_name: api_gateway_contacthub
+        image: nginx:latest
+        ports:
+            - "8091:80"
+        volumes:
+            - ./conf/api_conf.d/:/etc/nginx/api_conf.d/
+            - ./conf/api_json_errors.conf:/etc/nginx/api_json_errors.conf
+            - ./conf/api_backends.conf:/etc/nginx/api_backends.conf
+            - ./conf/api_gateway.conf:/etc/nginx/api_gateway.conf
+            - ./conf/nginx.conf:/etc/nginx/nginx.conf

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/beranda"
+        android:icon="@drawable/ic_home"
+        android:title="Beranda"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/whislist"
+        android:icon="@drawable/ic_contact"
+        android:title="Menyimpan"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/transaksi"
+        android:icon="@drawable/ic_share_contact"
+        android:title="Disimpan"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/akun"
+        android:icon="@drawable/ic_profile"
+        android:title="Akun"
+        app:showAsAction="always" />
+</menu>

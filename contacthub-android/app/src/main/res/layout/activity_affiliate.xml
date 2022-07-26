@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AffiliateActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_gradient"
+        android:elevation="5dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/AppToolbar.Light"></androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/layTotalDownline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/labelDownline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Total Referal"
+                android:textAlignment="center"
+                android:textColor="@color/md_white_1000" />
+
+            <RelativeLayout
+                android:id="@+id/layDownline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/labelDownline"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/txtTotalDownline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layTotalPenghasilan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layTotalDownline"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/labelTotalPenghasilan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Total Penghasilan"
+                    android:textAlignment="center"
+                    android:textColor="@color/md_white_1000" />
+
+                <RelativeLayout
+                    android:id="@+id/layTotPenghasilan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labelTotalPenghasilan"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/labelRpTotPenghasilan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp."
+                        android:textColor="@color/md_white_1000" />
+
+                    <TextView
+                        android:id="@+id/txtTotalPenghasilan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/labelRpTotPenghasilan"
+                        android:text="0"
+                        android:textColor="@color/md_white_1000"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/labelKetPenghasilanBulanIni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Penghasilan Bulan ini"
+                    android:textAlignment="center"
+                    android:textColor="@color/md_white_1000" />
+
+                <RelativeLayout
+                    android:id="@+id/layPenghasilanBulanIni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labelKetPenghasilanBulanIni"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/labelRpPenghasilanBulanIni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp."
+                        android:textColor="@color/md_white_1000" />
+
+                    <TextView
+                        android:id="@+id/txtPenghasilanBulanIni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/labelRpPenghasilanBulanIni"
+                        android:text="0"
+                        android:textColor="@color/md_white_1000"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/labelPenghasilanBelumCair"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Penghasilan Belum Dicairkan"
+                    android:textAlignment="center"
+                    android:textColor="@color/md_white_1000" />
+
+                <RelativeLayout
+                    android:id="@+id/layPenghasilanBelumCair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labelPenghasilanBelumCair"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/labelRpPenghasilanBelumCair"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp."
+                        android:textColor="@color/md_white_1000" />
+
+                    <TextView
+                        android:id="@+id/txtPenghasilanBelumCair"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/labelRpPenghasilanBelumCair"
+                        android:text="0"
+                        android:textColor="@color/md_white_1000"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layTotalPenghasilan"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/labelKomisi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Total Komisi Kredit"
+                    android:textAlignment="center"
+                    android:textColor="@color/md_white_1000" />
+
+                <RelativeLayout
+                    android:id="@+id/layKomisi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labelKomisi"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/labelRpKomisi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp."
+                        android:textColor="@color/md_white_1000" />
+
+                    <TextView
+                        android:id="@+id/txtTotalKomisi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/labelRpKomisi"
+                        android:text="0"
+                        android:textColor="@color/md_white_1000"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/labelKet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Komisi Kredit Bulan ini"
+                    android:textAlignment="center"
+                    android:textColor="@color/md_white_1000" />
+
+                <RelativeLayout
+                    android:id="@+id/laySaldo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labelKet"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/labelRp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp."
+                        android:textColor="@color/md_white_1000" />
+
+                    <TextView
+                        android:id="@+id/txtKomisi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/labelRp"
+                        android:text="0"
+                        android:textColor="@color/md_white_1000"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btnAjakTeman"
+        android:text="Ajak Teman"
+        android:textColor="@color/md_white_1000"
+        android:background="@drawable/btn_primary"
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_below="@id/btnAjakTeman"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/md_grey_100"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/listTransaksi"
+                android:cacheColorHint="@android:color/transparent"
+                android:listSelector="@android:color/transparent"
+                android:dividerHeight="0dp"
+                android:divider="@null"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </ListView>
+            <LinearLayout
+                android:id="@+id/notfound"
+                android:orientation="vertical"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_isi_saldo_new"/>
+                <TextView
+                    android:id="@+id/titleNotFound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/md_grey_700"
+                    android:text="Belum ada Histori Komisi"/>
+                <TextView
+                    android:id="@+id/descNotFound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textAlignment="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Tapi nanti kalau sudah ada, histori transaksinya akan kelihatan disini."/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

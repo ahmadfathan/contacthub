@@ -1,0 +1,11 @@
+python-slugify==4.0.1
+flask==1.1.2
+flask-restful==0.3.8
+flask-mongoengine
+Werkzeug==1.0.1
+requests
+wtforms_json
+pyfcm
+python-socketio[client]
+pika
+html2text

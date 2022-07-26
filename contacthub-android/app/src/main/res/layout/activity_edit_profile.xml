@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?colorPrimary"
+        android:elevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/maisonneuebold"
+                android:text="@string/title_edit_profile"
+                android:textSize="@dimen/text_size_16sp"
+                android:textColor="@color/md_white_1000"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:fontFamily="@font/sfuidisplaymedium"
+                android:text="@string/txt_greeting"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <Spinner
+                android:id="@+id/spinGreeting"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp">
+
+                <EditText
+                    android:id="@+id/edtNama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/txt_fullname"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:hint="@string/txt_fullname"
+                    android:inputType="text"
+                    android:paddingBottom="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextView"
+                    android:textColorHint="@color/md_white_1000"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp">
+
+                <EditText
+                    android:id="@+id/edtNickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/txt_nickname"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:hint="@string/txt_nickname"
+                    android:inputType="text"
+                    android:paddingBottom="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextView"
+                    android:textColorHint="@color/md_white_1000"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp">
+
+                <EditText
+                    android:id="@+id/edtWhatsApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/whatsapp"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:hint="@string/whatsapp"
+                    android:inputType="phone"
+                    android:paddingBottom="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextView"
+                    android:textColorHint="@color/md_white_1000"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp">
+
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/txt_email"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:hint="@string/txt_email"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextView"
+                    android:textColorHint="@color/md_white_1000"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:fontFamily="@font/sfuidisplaymedium"
+                android:text="@string/txt_gender"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <Spinner
+                android:id="@+id/spinGender"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp">
+
+                <EditText
+                    android:id="@+id/edtTglLahir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/txt_tgllahir"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:hint="@string/txt_tgllahir"
+                    android:paddingBottom="@dimen/margin_16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextView"
+                    android:textColorHint="@color/md_white_1000"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:fontFamily="@font/sfuidisplaymedium"
+                android:text="@string/txt_provinsi"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <Spinner
+                android:id="@+id/spinProvinsi"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:fontFamily="@font/sfuidisplaymedium"
+                android:text="@string/txt_kota"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <Spinner
+                android:id="@+id/spinKota"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp">
+
+                <EditText
+                    android:id="@+id/edtAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/txt_address"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:hint="@string/txt_address"
+                    android:inputType="text"
+                    android:paddingBottom="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextView"
+                    android:textColorHint="@color/md_white_1000"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp">
+
+                <EditText
+                    android:id="@+id/edtFacebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/txt_facebook"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:hint="@string/txt_facebook"
+                    android:inputType="text"
+                    android:paddingBottom="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextView"
+                    android:textColorHint="@color/md_white_1000"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp">
+
+                <EditText
+                    android:id="@+id/edtInstagram"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/txt_instagram"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:hint="@string/txt_instagram"
+                    android:inputType="text"
+                    android:paddingBottom="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextView"
+                    android:textColorHint="@color/md_white_1000"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp">
+
+                <EditText
+                    android:id="@+id/edtTokopedia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/txt_tokopedia"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:hint="@string/txt_tokopedia"
+                    android:inputType="text"
+                    android:paddingBottom="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextView"
+                    android:textColorHint="@color/md_white_1000"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp">
+
+                <EditText
+                    android:id="@+id/edtBukalapak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/txt_bukalapak"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:hint="@string/txt_bukalapak"
+                    android:inputType="text"
+                    android:paddingBottom="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextView"
+                    android:textColorHint="@color/md_white_1000"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp">
+
+                <EditText
+                    android:id="@+id/edtShopee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/txt_shopee"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:hint="@string/txt_shopee"
+                    android:inputType="text"
+                    android:paddingBottom="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextView"
+                    android:textColorHint="@color/md_white_1000"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp">
+
+                <EditText
+                    android:id="@+id/edtWebsite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/txt_website"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:hint="@string/txt_website"
+                    android:inputType="text"
+                    android:paddingBottom="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextView"
+                    android:textColorHint="@color/md_white_1000"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:fontFamily="@font/sfuidisplaymedium"
+                android:text="@string/txt_profession"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <Spinner
+                android:id="@+id/spinProfession"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp">
+
+                <EditText
+                    android:id="@+id/edtHobi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/txt_hobi"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:hint="@string/txt_hobi"
+                    android:inputType="text"
+                    android:paddingBottom="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextView"
+                    android:textColorHint="@color/md_white_1000"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:fontFamily="@font/sfuidisplaymedium"
+                android:text="@string/txt_religion"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <Spinner
+                android:id="@+id/spinAgama"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:fontFamily="@font/sfuidisplaymedium"
+                android:text="@string/txt_interest"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/gridInterest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_white_slim"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp" />
+
+                <ImageButton
+                    android:id="@+id/btnCariInterest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_browse" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:fontFamily="@font/sfuidisplaymedium"
+                android:text="@string/txt_relationship_status"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <Spinner
+                android:id="@+id/spinRelationshipStatus"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp">
+
+                <EditText
+                    android:id="@+id/edtBusinessName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/txt_business_name"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:hint="@string/txt_business_name"
+                    android:inputType="text"
+                    android:paddingBottom="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextView"
+                    android:textColorHint="@color/md_white_1000"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:fontFamily="@font/sfuidisplaymedium"
+                android:text="@string/txt_business_type"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <Spinner
+                android:id="@+id/spinBusinessType"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp">
+
+                <EditText
+                    android:id="@+id/edtProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/txt_product"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:hint="@string/txt_product"
+                    android:inputType="text"
+                    android:paddingBottom="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextView"
+                    android:textColorHint="@color/md_white_1000"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_16dp">
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txtPrivacyPolicy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sfuidisplaymedium"
+                    android:text="@string/aggreement"
+                    android:textSize="@dimen/text_size_12sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSimpan"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginStart="@dimen/margin_24dp"
+                android:layout_marginTop="@dimen/margin_24dp"
+                android:layout_marginEnd="@dimen/margin_24dp"
+                android:background="@drawable/btn_primary_round"
+                android:fontFamily="@font/sfuidisplaymedium"
+                android:text="@string/btn_save"
+                android:textColor="@color/md_white_1000" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

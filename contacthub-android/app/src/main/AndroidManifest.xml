@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="id.my.hubkontak">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ReadFeedActivity"></activity>
+        <activity android:name=".SinglePageFeedActivity" />
+        <activity android:name=".EditFeedActivity" />
+        <activity android:name=".FeedActivity" />
+        <activity android:name=".CariInterestActivity" />
+        <activity android:name=".CoverActivity" />
+        <activity android:name=".DetailContactActivity" />
+        <activity android:name=".WebviewActivity" />
+        <activity android:name=".ArticleActivity" />
+        <activity android:name=".SettingContactActivity" />
+        <activity android:name=".HistoryWithdrawActivity" />
+        <activity android:name=".SinglePageArticleActivity" />
+        <activity android:name=".CreditActivity" />
+        <activity android:name=".WithdrawAffiliateActivity" />
+        <activity android:name=".TopupCreditActivity" />
+        <activity android:name=".AffiliateActivity" />
+        <activity android:name=".EditProfileActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/LoginTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MainActivity" />
+
+        <receiver
+            android:name=".installreferrer.ReferrerReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver> <!-- Firebase Notifications -->
+        <service
+            android:name=".utils.googlefirebase.Firebasemessagingservice"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- Broadcast receivers -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="id.my.hubkontak"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_path" />
+        </provider>
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            tools:remove="android:permission">
+            <intent-filter>
+                <action
+                    android:name="com.android.vending.INSTALL_REFERRER"
+                    tools:node="remove" />
+            </intent-filter>
+        </receiver> <!-- Used for install referrer tracking -->
+        <service android:name="com.google.android.gms.tagmanager.InstallReferrerService" />
+
+        <receiver
+            android:name="com.google.android.gms.tagmanager.InstallReferrerReceiver"
+            android:exported="true"
+            android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

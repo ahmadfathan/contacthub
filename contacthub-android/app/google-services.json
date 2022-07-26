@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "247123574413",
+    "project_id": "kontak-hub",
+    "storage_bucket": "kontak-hub.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247123574413:android:10d400d4ed98d7949cacc4",
+        "android_client_info": {
+          "package_name": "id.my.hubkontak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "247123574413-bbisqkjpinckik7p6c0alsipua52g51e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnW_Urzw_SiZxqdmFoTt7jo4iZeOjMojU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "247123574413-bbisqkjpinckik7p6c0alsipua52g51e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

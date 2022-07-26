@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BottomSheetDialogPin" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/md_white_1000</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateVisible</item>
+    </style>
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/md_white_1000</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+    </style>
+
+    <style name="BottomSheetDialogFull" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:statusBarColor">@color/colorStatusBar</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+</resources>

@@ -1,0 +1,20 @@
+{
+    "notif_data_not_found": "Data tidak ditemukan",
+    "notif_missing_field": "Missing mandatory field",
+    "notif_missing_field_header": "Missing mandatory field header",
+    "notif_referral_code_not_found": "ReferralCode Not Found",
+    "notif_email_already": "Email sudah terdaftar",
+    "notif_username_already": "Username sudah terdaftar",
+    "notif_success": "Success",
+    "notif_register_failed": "Register Failed",
+    "notif_create_failed": "Failed create data",
+    "notif_update_failed": "Failed update data",
+    "notif_delete_failed": "Failed delete data",
+    "notif_invalid_access_token": "Invalid API KEY",
+    "notif_select_file": "No selected file",
+    "notif_no_file_part": "No File Part",
+    "notif_withdraw_error": "no credit will be withdrawn",
+    "notif_withdraw_limit": "batas penarikan belum terpenuhi",
+    "notif_feed_not_found": "Ads Feed tidak ditemukan",
+    "notif_updated": "KontakHub sudah ada versi terbaru, update sekarang?"
+}

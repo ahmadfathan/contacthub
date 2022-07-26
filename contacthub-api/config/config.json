@@ -1,0 +1,38 @@
+{
+    "APP_HOST": "0.0.0.0",
+    "APP_PORT": "80",
+    "APP_DEBUG": true,
+    "VERSION_APP": 1,
+    "UPDATE_REQUIRED": false,
+    "FILTER_SETTING_STARTUP": {
+        "_id": ["CS_CONTACT", "CS_CONTACT_TOPUP", "CS_MESSAGE_TOPUP", "URL_KEBIJAKAN_PRIVASI", "URL_BANTUAN", "TEMPLATE_SHARE", "VERSION_APP", "UPDATED_REQUIRED", "CLICK_ADS_MESSAGE"]
+    },
+    "MONGODB_SETTINGS": {
+        "db": "contact_hub",
+        "host": "localhost",
+        "port": 27017,
+        "username": "",
+        "password": "",
+        "authentication_source": ""
+    },
+    "TELEGRAM": {
+        "CHAT_ID": ["278264833"],
+        "TOKEN": "1711318531:AAHYuSe-fQDaMSB86hV19KOMbZ0cHrx1A0g"
+    },
+    "DEFAULT_ROLE": {
+        "ADMIN": "1",
+        "CUSTOMER": "2"
+    },
+    "DEFAULT_LANGUAGE": "en",
+    "RabbitMQ": {
+        "status": false,
+        "host": "",
+        "default_exchange": "",
+        "default_exchange_type": "topic"
+    },
+    "BASE_URL_ARTICLE": "https://sandbox.kontakhub.my.id/article/",
+    "BASE_URL_FEED": "https://sandbox.kontakhub.my.id/feed/",
+    "UPLOAD_FOLDER": "uploads/",
+    "ALLOWED_EXTENSIONS": ["png", "jpg", "jpeg"],
+    "FCM_KEY": "AAAAOYm2fo0:APA91bHXsSmge_upGOv2e1T8NrihNVvld5eq_RPVDu4-Ly_1h2mNB2wQLlFt7OyyFYtY9LbNQKWBghzeizNLbtuw7Y0kfw6CN6HE6tcvEM6rSD5gxzc6jJTtnmHhCmHt8UA2xMDTDE0z"
+}
